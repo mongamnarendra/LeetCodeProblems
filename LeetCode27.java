@@ -1,4 +1,6 @@
-package Leetcode;
+package LeetCodeProblems;
+
+import java.util.Arrays;
 
 public class LeetCode27 {
     public static void main(String[] args) {
@@ -25,6 +27,7 @@ public class LeetCode27 {
                 i++;
             }
         }
+        System.out.println(Arrays.toString(nums));
         return nums.length-count;
     }
 }

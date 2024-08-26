@@ -1,4 +1,4 @@
-package Leetcode;
+package LeetCodeProblems;
 
 public class LeetCode74 {
 

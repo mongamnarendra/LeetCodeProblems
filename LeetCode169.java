@@ -23,5 +23,9 @@ public class LeetCode169 {
         }
 
         return major;
+
+        /*Arrays.sort(nums);
+        int n = nums.length;
+        return nums[n/2];*/
     }
 }

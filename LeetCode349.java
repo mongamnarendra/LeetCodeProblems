@@ -1,5 +1,6 @@
 package LeetCodeProblems;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
@@ -12,24 +13,22 @@ public class LeetCode349 {
     }
 
     public static int[] intersection(int[] nums1, int[] nums2) {
-        Set<Integer> s1 = new HashSet<>();
-        Set<Integer> s2 = new HashSet<>();
-        for(int n:nums1)
+        ArrayList<Integer> al = new ArrayList<>();
+        for (int i=0;i<nums1.length;i++)
         {
-            s1.add(n);
+            for(int j=0;j<nums2.length;j++)
+            {
+                if(nums1[i]==nums2[j])
+                {
+                    al.add(nums2[i]);
+                }
+            }
         }
-
-        for(int n:nums2)
+        int[] res=new int[al.size()];
+        int index=0;
+        for(int a:al)
         {
-            s2.add(n);
-        }
-
-        s1.retainAll(s2);
-        int[] res=new int[s1.size()];
-        int i=0;
-        for(int s:s1)
-        {
-            res[i++]=s;
+            res[index++]=a;
         }
         return res;
     }

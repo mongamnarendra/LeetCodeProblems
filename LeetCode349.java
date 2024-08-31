@@ -31,5 +31,6 @@ public class LeetCode349 {
             res[index++]=a;
         }
         return res;
+
     }
 }
